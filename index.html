@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+		body {
+		  padding: 10px;
+		  background-color: white;
+		  color: black;
+		  font-size: 25px;
+		}
+
+		.dark-mode {
+		  background-color: black;
+		  color: white;
+		}
+		</style>
+	</head>
+	<body>
+
+		<p>Select theme: <button onclick="myFunction()">Tekan disini dark/light</button></p>
+
+		<script>
+		function myFunction() {
+		   var element = document.body;
+		   element.classList.toggle("dark-mode");
+		}
+		</script>
+
+		<h1>This is my website</h1>
+
+		<label for="weather">Select the weather type today:</label>
+
+		<select name="weather" id="weather" onchange="cuaca()">
+		  <option value="pilih" >Pilih</option>
+		  <option value="sunny" >Sunny</option>
+		  <option value="cloudy">Cloudy</option>
+		  <option value="windy" >Windy</option>
+		  <option value="snowy" >Snowy</option>
+		  <option value="rainy" >Rainy</option>
+		</select>
+
+		<p id="hasil"></p>
+		<script type="text/javascript">
+			function cuaca(){
+				var weather = document.getElementById("weather");
+				if(weather.value == "sunny"){
+					var result = document.getElementById("hasil");
+					result.innerText = "Enak banget pas sunny jemur pakaian";
+				}
+				else if ( weather.value == "cloudy"){
+					var result = document.getElementById("hasil");
+					result.innerText = "Enak jalan-jalan pas cloudy"; 
+				}
+				else if (weather.value == "windy"){
+					var result = document.getElementById("hasil");
+					result.innerText = "Main layangan pas windy boleh juga";
+				}
+				else if (weather.value == "snowy"){
+					var result = document.getElementById("hasil");
+					result.innerText = "Selamat pagi snowy";
+				}
+				else if (weather.value == "rainy"){
+					var result = document.getElementById("hasil");
+					result.innerText = "Sedia payung sebelum rainy";
+				}
+				else{
+					var result = document.getElementById("hasil");
+					result.innerText = "Salah bree";
+				}
+			}
+		</script>
+
+		<label>Input number:</label>
+		<input type="number" name="angka" id="number">
+		<button type="submit" onclick="faktorial()">Get Factorial</button>
+
+		<script type="text/javascript">
+			function faktorial(){
+				var angka = document.getElementById("number");
+
+				  let hasil = 1;
+				  if (angka.value == 0 || angka.value == 1){
+				    hasil = 1;
+				  }else{
+				    for(var i = angka.value; i >= 1; i--){
+				      hasil = hasil * i;
+				    }
+				  }
+				 
+				var result = document.getElementById("hasilfaktorial");
+					result.innerText = "The factorial of " + angka.value + " is " + hasil;
+			}
+				
+		</script>
+
+		<p id="hasilfaktorial"></p>
+
+	</body>
+</html>
+
