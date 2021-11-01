@@ -15,6 +15,6 @@ jangan lupa tambahkan hasil screenshoot web di dalam file
 
 ### Tambahkan identitas dasar di sini: 
 
-Nama  : 
+Nama  : Ihtiandiko Wicaksono
 <br>
-NIM   : 
+NIM   : 119140118
