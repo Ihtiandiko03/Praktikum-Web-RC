@@ -65,7 +65,6 @@
             var mangga = document.getElementById("mangga").value * 15000;
             var jambu = document.getElementById("jambu").value * 13000;
             var salak = document.getElementById("salak").value * 10000;
-            console.log(mangga + jambu + salak);
             var hasil = mangga + jambu + salak;
             total.value = hasil;
         }
